@@ -1,0 +1,156 @@
+:root{
+    --backgrond: #0f1722;
+    --background-calculator: #1d293a;
+    --text-color: #fff;
+    --border-screen: #354357;
+    --hover: #6c63ff;
+}
+
+body, h1, p , span {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--backgrond);
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center; 
+}
+
+img{
+    max-width: 420px;
+    width: 100%;
+  
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0;
+    color:var(--text-color);
+}
+
+#calculator {
+    background-color: var(--background-calculator);
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#screen-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 258px;
+    height: 70px;
+    border: 1px solid var(--border-screen);
+    text-align: right;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#upper-number, #result-number {
+    float: right;
+    color: var(--text-color);
+}
+
+#result-number {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 22px;
+    clear: both;
+}
+
+.btn-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    margin: 0 7.5px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--border-screen);
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--hover);
+}
+
+#ac-btn {
+    margin-left: -200px;
+}
+
+#division-btn {
+    position: absolute;
+    right: 14px;
+}
+
+#zero-btn, #equals-btn {
+    width: 120px;
+}
+
+#ac-btn, #division-btn, #multiplication-btn, #minus-btn, #plus-btn, #equals-btn, #dot-btn, #zero-btn {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+footer{
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    bottom: 0;
+    background-color: var(--background-calculator);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media(max-width: 760px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        max-width: 80%;
+    }
+    h1{
+        max-width: 70%;
+    }
+    #calculator{
+        max-width: 85%;
+    }
+
+    footer{
+        bottom: 0;
+        flex-direction: column;
+    }
+
+    footer h4, footer h5{
+        margin: 8px auto;
+    }
+}
